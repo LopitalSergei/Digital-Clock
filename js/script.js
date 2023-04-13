@@ -1,5 +1,7 @@
 "use strict"
 
+window.addEventListener('load', calculateTime());
+
 function calculateTime() {
 	let date = new Date();
 
@@ -19,6 +21,5 @@ function calculateTime() {
 	document.getElementById("day").innerHTML = day;
 	document.getElementById("month").innerHTML = monthNames[monthNum];
 
+	setTimeout(calculateTime, 200);
 }
-
-calculateTime();
